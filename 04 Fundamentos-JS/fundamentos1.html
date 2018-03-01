@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos de Programación en JavaScript parte 1</title>
+	<meta name="description" content="En este ejercicio entenderemos fundamentos de programación en JavaScript" />
+	<style>
+		body, html 
+		{
+			font-family: Helvetica, sans-serif;
+			font-size: 16px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Fundamentos de Programación en JavaScript parte 1</h1>
+	<p>
+		<a href="index.html">Regresar al inicio</a>
+	</p>
+	<h2>Definiendo un Perro</h2>
+	<script>
+		function Perro(n,r,e,s,a,f)
+		{
+			var o = this;
+			var imagen = document.createElement("img");
+
+			o.nombre = n;
+			o.raza = r;
+			o.edad = e;
+			//o.sexo = s;
+			o.adiestrado = a;
+			o.foto = f;
+			
+
+			//Asginación =
+			//Comparación ==
+			//Idéntico(mismo tipo de dato) ===
+
+			//Operador Ternario
+			//variable = (condicion)?verdadero:Falso
+			o.sexo = (s)?"Macho":"Hembra";
+			//console.log(typeof s, typeof n, typeof e)
+
+
+			o.aparecer = function()
+			{
+				//alert("El objeto aparece");
+				//var imagen = document.createElement("img");
+				imagen.src = o.foto;
+				imagen.alt = o.nombre;
+				imagen.title = o.nombre;
+
+				document.body.appendChild(imagen);
+			}
+
+			o.ladrar = function()
+			{
+				//alert("Guauu!! Guauu!!")
+				var audio = document.createElement("audio");
+				audio.src = "activos/guau.mp3";
+				//document.body.appendChild(audio);
+				//audio.controls = true;
+				return audio.play();
+			}
+			
+			o.comer = function(c)
+			{
+				o.comida = c;
+				var alerta = alert(o.nombre+" comió "+o.comida);
+				return alerta;
+			}
+
+			o.mover = function()
+			{
+				//alert("El objeto se ha movido");
+				imagen.style.position = "relative";
+				imagen.style.left = "10em";
+				imagen.style.borderRadius = "100%";
+			}
+		}
+		function iniciar()
+		{
+			//alert("Ejecutando función iniciar");
+			var pockis = new Perro('Pockis','KindaPanda',1,true,true,'activos/kenai.jpg');
+			//alert(pockis);
+
+			document.write(pockis+"<br />"+window+"<br />"+document+"<br />"+navigator);
+
+			console.log(pockis,window,navigator,document);
+
+			document.write("<p>"+pockis.nombre+"</p>");
+			document.write("<p>"+pockis.raza+"</p>");
+			document.write("<p>"+pockis.edad+"</p>");
+			document.write("<p>"+pockis.sexo+"</p>");
+			document.write("<p>"+pockis.adiestrado+"</p>");
+
+			pockis.comer('pollo a la brasa');
+			pockis.comer('croquetas')
+			pockis.aparecer();
+			pockis.ladrar();
+			pockis.mover();
+		}
+		iniciar();
+	</script>
+</body>
+</html>
