@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamentos de Programación parte 2</title>
+	<meta name="description" content="En este ejercicio seguiremos entendiendo fundamentos de programación en JavaScript" />
+	<style>
+		body, html 
+		{
+			font-family: Helvetica, sans-serif;
+			font-size: 16px;
+		}
+
+	</style>
+	<!--
+	Algoritmo: Es una aserie de pasos a seguir para realizar una tarea, estos pasos son ordenados y finitos. Es como una receta
+	
+	Diagramas de Flujo: Es la representación gráfica de un algoritmo.
+
+	Eventos:
+	http://librosweb.es/ajax/capitulo_6/modelo_basico_de_eventos.html
+
+	DOM: Document Object Model
+		http://es.wikipedia.org/wiki/Document_Object_Model
+		http://libroswev.es/ajax/capitulo_4.html
+
+	Estructuras de control: COndicionan el flujo de la programación.
+		1)Estructuras Secuenciales (se ejecutan una línea de código tras otra)
+		2)Estructuras Condicionales o Decisión
+			operador ternario
+			if-else
+			if-else if-else
+			switch-case
+		3)Estructuras Repetitivas o Ciclos
+			for
+			while
+	-->
+</head>
+<body>
+	<h1>Fundamentos de Programación en JavaScript parte 2</h1>
+	<p>
+		<a href="index.html">Regresar al inicio</a>
+	</p>
+	<h2>Algoritmos y Diagramas de Flujo</h2>
+	<img src="activos/simbolos-diagramas-flujo.png" alt="Símbolos de los diagramas de flujo" />
+	<h2>Eventos</h2>
+	<button onclick="eventoClick();">Manejador de eventos con atributo HTML</button>
+	<button id="boton">Manejador de eventos semántico</button>
+	<button id="boton2">Manejador de eventos múltiple</button>
+	<h2>¿Cómo determinamos si un número es par o impar?</h2>
+	<!--
+	Algoritmo:
+		1)Saber cuál es el numero a determinar par o impar
+		2)Dividir entre dos el número
+		3)Evaluar el residuo
+			4)Par si el residuo es 0
+			5)Impar si el residuo es 1
+	-->
+	<button id="numero">Dame un número</button>
+	<br/>
+	<img src="activos/diagrama-par-impar.jpg" alt="Diagrama Par-Impar" />
+	<script src="js/fundamentos2.js"></script>
+</body>
+</html>
